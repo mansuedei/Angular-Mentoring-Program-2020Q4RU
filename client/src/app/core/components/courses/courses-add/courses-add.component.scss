@@ -1,0 +1,18 @@
+@import '../../../../styles/colors.scss';
+@import '../../../../styles/buttons.scss';
+
+.button--courses-add {
+    background-color: $courses-button;
+    padding-left: 33px;
+
+    &:before {
+        content:'';
+        display: block;
+        position: absolute;
+        background: center / contain url('../../../../img/icons/plus.png');
+        width: 14px;
+        height: 14px;
+        top: 11px;
+        left: 11px;
+    }
+}

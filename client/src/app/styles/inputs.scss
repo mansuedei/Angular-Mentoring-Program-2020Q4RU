@@ -1,0 +1,11 @@
+.input {
+    border: 1px solid $border-input;
+    border-radius: 3px;
+    height: 36px;
+    padding: 9px 12px;
+    font-family: 'Source Sans Pro', sans-serif; 
+}
+
+::placeholder {
+    color: $text-input-placeholder;
+}
