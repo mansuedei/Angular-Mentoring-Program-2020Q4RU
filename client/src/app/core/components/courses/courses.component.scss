@@ -1,0 +1,23 @@
+.courses-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: stretch;
+    flex: 1;
+    margin-top: 21px;
+}
+
+.courses-list-container {
+    max-height: calc(100vh - 377px);
+    overflow-y: scroll;
+    overflow-x: visible;
+    margin-bottom: 23px;
+}
+
+vc-courses-search {
+    align-self: flex-start;
+}
+
+vc-courses-add {
+    align-self: flex-end;
+    margin-bottom: 17px;
+}

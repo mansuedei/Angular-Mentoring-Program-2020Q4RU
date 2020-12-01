@@ -1,0 +1,21 @@
+@import '../../../styles/colors.scss';
+
+.breadcrumbs {
+    height: 64px;
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    margin: 0 85px;
+    background-color: white;
+}
+
+.breadcrumbs__menu {
+    display: flex;
+    list-style: none;
+    padding: 0;
+}
+
+.breadcrumbs__item {
+    color: $text-navigation;
+    font-weight: bold;
+}

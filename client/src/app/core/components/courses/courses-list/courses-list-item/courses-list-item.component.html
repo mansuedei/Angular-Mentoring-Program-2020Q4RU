@@ -1,1 +1,18 @@
-<p>courses-list-item works!</p>
+<div class="courses-item__container">
+    <div class="courses-item__header">
+        <h1 class="courses-item__title">{{course.title}}</h1>
+        <ul class="courses-item__list">
+            <li class="courses-item__item">{{convertDuration(course.duration)}}</li>
+            <li class="courses-item__item">{{course.creationDate.toLocaleDateString("en-US")}}</li>
+        </ul>
+    </div>
+    <div class="courses-item__content">
+        <p class="courses-item__description">
+            {{course.description}}
+        </p>
+        <div class="courses-item__buttons">
+            <button class="button button__courses-item" type="button">Edit</button>
+            <button class="button button__courses-item" type="button">Delete</button>
+        </div>
+    </div>
+</div>

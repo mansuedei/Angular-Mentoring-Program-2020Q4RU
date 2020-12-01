@@ -1,5 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 
+import { getMockCoursesData } from '../../../../mocks/courses';
+
 @Component({
   selector: 'vc-courses-list',
   templateUrl: './courses-list.component.html',
@@ -7,14 +9,30 @@ import { Component, OnInit } from '@angular/core';
 })
 export class CoursesListComponent implements OnInit {
 
-  public items: string[];
+  public courses: any;
 
   constructor() { }
 
-  ngOnInit(): void {
-    this.items = [
-    'Course 1', 'Course 2', 'Course 3'
-    ];
+  async ngOnInit(): Promise<any> {
+    this.courses = await this.loadCourses();
   }
+
+  async loadCourses(){
+    const data = await this.getCoursesData();
+    return data;
+  }
+
+  getCoursesData() {
+    return new Promise((resolve, reject) => {
+        getMockCoursesData().then((data) => {
+            if (data) {
+                resolve(data);
+            } else {
+                data = [];
+                resolve(data);
+            }
+        }, reject);
+    });
+}
 }
 

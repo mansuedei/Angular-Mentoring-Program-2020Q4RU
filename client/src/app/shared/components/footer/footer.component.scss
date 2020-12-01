@@ -1,0 +1,15 @@
+@import "../../../styles/colors.scss";
+
+.footer {
+    background: $header-footer;
+    color: white;
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    padding: 19px 85px;
+    height: 60px;
+}
+
+.footer__legal-info {
+    font-size: 12px;
+}
